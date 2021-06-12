@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/holoplay/HoloPlayVolume.gdns" type="Script" id=1]
+
+[sub_resource type="ProceduralSky" id=1]
+sky_top_color = Color( 0.211765, 0.313726, 0.552941, 1 )
+sky_horizon_color = Color( 0.545098, 0.686275, 0.811765, 1 )
+ground_bottom_color = Color( 0.545098, 0.686275, 0.811765, 1 )
+ground_horizon_color = Color( 0.545098, 0.686275, 0.811765, 1 )
+sun_latitude = 50.0
+sun_angle_max = 30.0
+sun_curve = 0.13
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+ambient_light_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+ambient_light_energy = 3.0
+ambient_light_sky_contribution = 0.3
+tonemap_mode = 2
+tonemap_white = 6.0
+
+[sub_resource type="Shader" id=3]
+code = "shader_type spatial;
+
+varying vec3 normal;
+
+void vertex() {
+	normal = NORMAL.xyz;	
+}
+
+void fragment() {
+	ALBEDO.rgb = abs(normal);
+}"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+
+[sub_resource type="CubeMesh" id=5]
+size = Vector3( 0.2, 0.2, 0.2 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="HoloPlayVolume" type="Spatial" parent="."]
+script = ExtResource( 1 )
+dummy = true
+debug_view = true
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+material_override = SubResource( 4 )
+mesh = SubResource( 5 )
+material/0 = null

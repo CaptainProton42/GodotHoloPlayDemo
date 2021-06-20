@@ -1,15 +1,7 @@
 ### ⚠️ Test Release ⚠️
-### This plugin does *NOT* currently work. I'm publishing it here so people can test it. Please describe any issues you're experiencing as detailed as possible by opening an issue [here](https://github.com/CaptainProton42/GodotHoloPlay/issues)! Thanks! ⚠️
+### I am currently not able to test this plugin myself. Please let me know whether it works and report any issues [here](https://github.com/CaptainProton42/GodotHoloPlay/issues)! You can also contact me on Discord (CaptainProton#3749) or [Twitter](https://twitter.com/CaptainProton42) should you prefer. Thanks!
 
-### Current state:
-
-* Quilt rendering seems to work (you can enable direct output of the quilt by enabling the `Dummy` and `Debug View` properties of `HoloPlayVolume`.
-* Output on the Looking Glass itself does *not* seem to work at the moment.
-* I added some debugging output to the console that should display the properties of your Looking Glass Portrait. Please include it in your issue reports.
-
-***Report all issues [here](https://github.com/CaptainProton42/GodotHoloPlay/issues)!***
-
-***If you have an idea what's going on or are just curious, take a look at the [GDNative source](https://github.com/CaptainProton42/GodotHoloPlayNative).***
+***If you want to take a look yourself or are just curious, take a look at the [GDNative source](https://github.com/CaptainProton42/GodotHoloPlayNative).***
 
 ### Instructions
 
@@ -18,3 +10,4 @@
 * Open the project in Godot 3.x (I tested it on Godot 3.3.2.)
 * A colored cube should display on your Looking Glass Portrait right away.
 * If it doesn't, make sure the `Main.tscn` scene is open, click on the `HoloPlayVolume` node and try changing the `Device Index` setting.
+* I added some debugging output to the console that should display the properties of your Looking Glass Portrait. Please include it in your issue reports.

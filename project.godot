@@ -14,6 +14,10 @@ config/name="HoloPlay Demo"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/dpi/allow_hidpi=true
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/holoplay/plugin.cfg" )

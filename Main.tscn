@@ -37,7 +37,7 @@ void fragment() {
 shader = SubResource( 3 )
 
 [sub_resource type="CubeMesh" id=5]
-size = Vector3( 0.2, 0.2, 0.2 )
+size = Vector3( 0.15, 0.15, 0.15 )
 
 [node name="Spatial" type="Spatial"]
 
@@ -46,6 +46,8 @@ environment = SubResource( 2 )
 
 [node name="HoloPlayVolume" type="Spatial" parent="."]
 script = ExtResource( 1 )
+view_dist = 7.5
+view_cone = 70.0
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 material_override = SubResource( 4 )

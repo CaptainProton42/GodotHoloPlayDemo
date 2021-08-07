@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://addons/holoplay/HoloPlayVolume.gdns" type="Script" id=1]
+[ext_resource path="res://TextureRect.gd" type="Script" id=2]
 
 [sub_resource type="ProceduralSky" id=1]
 sky_top_color = Color( 0.211765, 0.313726, 0.552941, 1 )
@@ -46,10 +47,17 @@ environment = SubResource( 2 )
 
 [node name="HoloPlayVolume" type="Spatial" parent="."]
 script = ExtResource( 1 )
-view_dist = 7.5
-view_cone = 70.0
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 material_override = SubResource( 4 )
 mesh = SubResource( 5 )
 material/0 = null
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

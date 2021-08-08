@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-ca37cabba71072d1569f69d3ce5f90ca.stex"
+path="res://.import/icon_holoplayrecorder.svg-411128e57f7c0eeb54c863ec584d9637.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/holoplay/icon.png"
-dest_files=[ "res://.import/icon.png-ca37cabba71072d1569f69d3ce5f90ca.stex" ]
+source_file="res://addons/holoplay/icon_holoplayrecorder.svg"
+dest_files=[ "res://.import/icon_holoplayrecorder.svg-411128e57f7c0eeb54c863ec584d9637.stex" ]
 
 [params]
 

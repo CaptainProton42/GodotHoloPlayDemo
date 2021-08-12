@@ -16,31 +16,19 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/width=512
-window/size/height=512
+window/size/width=500
+window/size/height=500
 window/dpi/allow_hidpi=true
 
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/holoplay/plugin.cfg" )
 
-[holoplay]
-
-hide_main_window=true
-
-[input]
-
-mouse_left={
-"deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
- ]
-}
-
 [physics]
 
 common/enable_pause_aware_picking=true
+3d/default_gravity=0.0
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"

@@ -1,4 +1,7 @@
 extends TextureRect
 
+onready var holo_play_volume = get_node("../HoloPlayVolume")
+
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	texture = get_parent().get_node("HoloPlayVolume").get_quilt_tex()
+	texture = holo_play_volume.get_quilt_tex()

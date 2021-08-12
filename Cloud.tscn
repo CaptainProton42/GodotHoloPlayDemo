@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://CloudParticles.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+emission_enabled = true
+emission = Color( 0.690196, 0.74902, 0.898039, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="SphereMesh" id=2]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 8
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 0 ), 0.0, 20.3123, 0, 0, Vector2( 0.139326, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.602247, 0.265766 ), -1.38406, -1.38406, 0, 0, Vector2( 0.991011, 0 ), 0.0, 0.0, 0, 0 ]
+
+[node name="Cloud" type="Spatial"]
+
+[node name="CloudParticles" type="CPUParticles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.15196, 0, 0 )
+material_override = SubResource( 1 )
+amount = 16
+lifetime = 4.0
+local_coords = false
+mesh = SubResource( 2 )
+emission_shape = 2
+emission_box_extents = Vector3( 0.1, 0.1, 0.1 )
+gravity = Vector3( 0, 0, 0 )
+scale_amount = 0.35
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 3 )
+anim_speed = 51.86
+script = ExtResource( 1 )

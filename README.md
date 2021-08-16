@@ -2,6 +2,8 @@
 
 This is a small demo project for my [HoloPlay for Godot 3.x](https://github.com/CaptainProton42/GodotHoloPlay) plugin.
 
+Get it from the [asset library](https://godotengine.org/asset-library/asset/1025).
+
 ## Controls
 
 * Move the mouse to interact with the hot air balloon
